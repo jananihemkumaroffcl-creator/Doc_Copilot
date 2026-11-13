@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+storage/
+qdrant_data/
+data/*.pdf
+!data/.gitkeep
+*.egg-info/

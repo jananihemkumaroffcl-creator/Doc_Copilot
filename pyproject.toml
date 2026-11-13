@@ -1,0 +1,30 @@
+[project]
+name = "doc-copilot"
+version = "0.1.0"
+description = "Multimodal voice document copilot, built in stages to learn the modern LLM stack"
+requires-python = ">=3.10"
+dependencies = [
+    "llama-index-core>=0.11",
+    "llama-index-llms-ollama",
+    "llama-index-embeddings-huggingface",
+    "llama-index-vector-stores-qdrant",
+    "llama-index-readers-file",
+    "qdrant-client",
+    "pypdf",
+    "python-dotenv",
+    "typer",
+    "rich",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ipykernel"]
+
+[project.scripts]
+copilot = "copilot.cli:app"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
